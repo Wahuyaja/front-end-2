@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Inovasi - Inovasi Industri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Website Edukasi Industri Inovatif</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil Perusahaan</a></li>
+                <li><a href="simulasi.html">Simulasi Inovasi</a></li>
+                <li><a href="tips.html">Tips Keberlanjutan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Simulasi Inovasi Industri</h2>
+        <p>Coba simulasi sederhana untuk melihat bagaimana inovasi meningkatkan efisiensi.</p>
+        <button onclick="runSimulation()">Mulai Simulasi</button>
+        <button onclick="toggleDarkMode()">Mode Gelap</button>
+        <div id="simulation-result"></div>
+    </section>
+
+    <script>
+        function runSimulation() {
+            const resultDiv = document.getElementById("simulation-result");
+            let efficiency = Math.random() * 100; // Contoh hasil acak
+            resultDiv.innerHTML = `<p>Efisiensi meningkat sebesar <strong>${efficiency.toFixed(2)}%</strong></p>`;
+            resultDiv.style.border = "1px solid #004aad";
+            resultDiv.style.padding = "1em";
+            resultDiv.style.marginTop = "1em";
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Edukasi Industri Inovatif</p>
+    </footer>
+</body>
+</html>
